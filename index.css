@@ -1,0 +1,123 @@
+:root {
+    --sc-bg-color: rgb(7, 3, 31);
+    --bg-color: rgb(78, 53, 218);
+    --sc-tablet1-width: 720px;
+    --sc-tablet2-width: 960px;
+    --sc-desktop-width: 1170px;
+    --sc-desktop2-width: 1320px;
+    --p: 1rem;
+    --m: 3rem;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--sc-bg-color);
+    color: whitesmoke;
+}
+.section {
+background-color: var(--bg-color);
+    margin: auto;
+    margin-top: var(--m);
+    padding: var(--p);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--p);
+}
+.todo-container > * {
+    background-color: hsl(233, 14%, 35%);
+    margin: var(--m);
+
+}
+.input-field {
+    display: flex;
+}
+.input-field input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: var(--p);
+}
+.input-field .add-item-btn {
+    background-color: purple;
+    padding: var(--p);
+    cursor: pointer;
+}
+.list-item {
+    display: flex;
+    border-bottom: 1px solid white;
+    padding: var(--p);
+    position: relative;
+}
+.list-item .clickable-circle {
+    height: 20px;
+    width: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    
+}
+.check-mark {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('images/icon-check.svg'), linear-gradient(to bottom right, white, purple);
+}
+.list-item .list-paragraph {
+    margin-left: var(--p);
+}
+.list-item .close-btn {
+    position: absolute;
+    right: var(--p);
+    cursor: pointer;
+}
+.holder-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--p);
+}
+.holder-footer > * {
+    cursor: pointer;
+}
+.state {
+    display: flex;
+    gap: var(--p);
+    justify-content: center;
+    
+}
+.active-tab {
+    color: blue;
+}
+.todo-container .drag-drop {
+    background-color: revert;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .section {
+        width: var(--sc-tablet-width);
+    }
+    .todo-container {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .section {
+        width: var(--sc-tablet2-width);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .section {
+        width: var(--sc-desktop-width);
+    }
+}
+
+
+@media screen and (min-width: 1400px) {
+    .section {
+        width: var(--sc-desktop2-width);
+    }
+}

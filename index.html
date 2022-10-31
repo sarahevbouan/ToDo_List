@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <section class="section">
+        <h1>TODO</h1>
+        <div class="todo-container">
+<!-- Header Section -->
+            <div class="input-field">
+                <input type="text" placeholder="Create a new todo...">
+                <div class="add-item-btn"><p>Add</p></div>
+            </div>
+<!-- List items -->
+            <ul class="list-items-holder">
+                <div class="holder-footer">
+                    <p class="items-left">0 items left</p>
+                    <div class="state">
+                        <p class="all-todo">All</p>
+                        <p class="active-todo">Active</p>
+                        <p class="completed-todo">Completed</p>
+                    </div>
+                    <p class="clear-completed">Clear completed</p>
+                </div>
+            </ul>
+            <p class="drag-drop">Drag and drop to reorder!</p>
+        </div>
+    </section>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
